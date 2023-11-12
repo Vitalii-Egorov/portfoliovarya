@@ -1,0 +1,450 @@
+//====================================================================================================
+.page {
+
+    &__main {
+        margin-bottom: 75px;
+    }
+
+    &__abautme {
+        margin-bottom: 75px;
+    }
+
+    &__portfolio {
+        margin-bottom: 75px;
+    }
+
+    &__stages {
+        margin-bottom: 75px;
+    }
+
+    &__contact {}
+}
+
+//====================================================================================================
+.main {
+
+    &__container {}
+
+    &__body {
+        padding: 210px 140px;
+
+        /*  @include adaptiveValue("padding-top", 210, 20);
+        @include adaptiveValue("padding-bottom", 210, 20);
+        @include adaptiveValue("padding-right", 140, 0);
+        @include adaptiveValue("padding-left", 140, 0);
+ */
+        @media (max-width:890px) {
+            padding: 20px 0;
+
+        }
+    }
+
+    &__title {
+        color: #000;
+        font-family: Lora;
+        @include adaptiveValue("font-size", 52, 24);
+        font-weight: 600;
+        line-height: normal;
+        text-transform: uppercase;
+
+        &:not(:nth-last-child(2)) {
+            margin-bottom: 38px;
+
+            @media (max-width:$mobile) {
+                margin-bottom: 19px;
+
+            }
+        }
+
+        &:nth-last-child(2) {
+            margin-bottom: 5px;
+        }
+    }
+
+
+    &__subtitle {
+        text-align: right;
+        font-family: "Caveat";
+        font-size: 28px;
+        line-height: normal;
+
+        @media (max-width:$mobileSmall) {
+            font-size: 24px;
+
+        }
+    }
+}
+
+
+.titleright {
+    text-align: right;
+}
+
+
+
+//====================================================================================================
+.abautme {
+
+    &__container {}
+
+    &__body {
+        position: relative;
+        background: #F5EFE8;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background: #fff;
+            z-index: 2;
+            width: 100%;
+            height: 50%;
+            bottom: 0;
+            left: 0;
+
+            @media (max-width:$mobile) {
+                display: none;
+            }
+        }
+    }
+
+    &__title {}
+
+    &__content {
+
+        padding: 95px 130px 185px 120px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        position: relative;
+        z-index: 3;
+
+
+
+        @media (max-width:$mobile) {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        @media (max-width:$pc) {
+            padding: 50px 0px 50px 0px;
+        }
+    }
+}
+
+.content {
+
+
+    &__text {
+        margin-right: 25px;
+    }
+
+    &__image {
+        border: 1px #000 solid;
+        border-radius: 155px 155px 0px 0px;
+        padding: 10px;
+    }
+}
+
+.content-text {
+
+    &__name {
+        @include adaptiveValue("font-size", 28, 24);
+        max-width: 274px;
+        font-family: Lora;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 26px;
+
+        @media (max-width:$mobile) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__abaut {
+        max-width: 387px;
+        font-family: Lora;
+        @include adaptiveValue("font-size", 20, 16);
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 40px;
+
+        @media (max-width:$mobile) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__text {
+        @include adaptiveValue("font-size", 16, 14);
+        max-width: 378px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
+
+.content-image {
+
+    &__image-ibg {
+        @include adaptiveValue("width", 300, 270);
+        @include adaptiveValue("height", 350, 320);
+    }
+}
+
+//====================================================================================================
+
+
+
+.portfolio {
+
+    &__container {
+        position: relative;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 60px 120px 30px 120px;
+
+        @media (max-width:$pc) {
+            padding: 50px 0px 50px 0px;
+        }
+    }
+
+    &__title {}
+
+    &__item {
+        width: 550px;
+        height: 180px;
+        display: flex;
+        padding: 15px;
+        justify-content: space-between;
+        align-items: flex-start;
+        border: 1px solid #000;
+        background: #FFF;
+        gap: 5px;
+
+        @media (max-width:$mobileSmall) {
+            height: 130px;
+            padding: 5px;
+        }
+    }
+
+    &__row {
+        display: flex;
+    }
+
+}
+
+.item-portfolio {
+
+    &__image-ibg {
+        width: 277px;
+        height: 150px;
+
+        @media (max-width:$mobileSmall) {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__title {
+        max-width: 138px;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &__subitem {
+        padding: 30px 20px;
+
+        @media (max-width:$mobile) {
+            padding: 0px 0px 0px 0px;
+        }
+
+    }
+}
+
+.item-portfolio1 {
+    text-align: right;
+
+
+}
+
+.item-portfolio2 {}
+
+.item-portfolio3 {}
+
+.row1 {
+    justify-content: flex-start;
+
+    @media (max-width:$mobile) {
+        justify-content: center;
+    }
+}
+
+.row2 {
+    justify-content: center;
+}
+
+.row3 {
+    justify-content: flex-end;
+
+    @media (max-width:$mobile) {
+        justify-content: center;
+    }
+}
+
+.sibitem1 {
+    img {
+        transform: rotate(180deg);
+    }
+}
+
+//====================================================================================================
+
+.stages {
+
+    &__container {}
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 115px 90px 40px 120px;
+
+        @media (max-width:$pc) {
+            padding: 50px 0px 50px 0px;
+        }
+    }
+
+    &__title {}
+
+    &__item-title {
+        font-family: Lora;
+        @include adaptiveValue("font-size", 20, 16);
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-bottom: 15px;
+
+    }
+
+    &__row {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 33px;
+        border-bottom: 1px solid #DDCAC2;
+
+        @media (max-width:$mobile) {
+            flex-direction: column;
+            gap: 15px;
+        }
+    }
+
+    &__item {
+
+        @media (max-width:$mobile) {
+            border-bottom: 1px solid #DDCAC2;
+        }
+    }
+
+    &__text {
+        @include adaptiveValue("font-size", 16, 14);
+        max-width: 355px;
+        height: 135px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        @media (max-width:$mobile) {
+            height: 100px;
+        }
+    }
+}
+
+//====================================================================================================
+
+.contact {
+
+    &__container {}
+
+    &__body {
+        position: relative;
+        padding: 123px 0px 116px 140px;
+
+        @media (max-width:$pc) {
+            padding: 50px 0px 50px 0px;
+        }
+    }
+
+    &__title {
+        font-family: Lora;
+        @include adaptiveValue("font-size", 52, 24);
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        @include adaptiveValue("margin-bottom", 32, 16);
+    }
+
+    &__text {
+        @include adaptiveValue("font-size", 20, 16);
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        @include adaptiveValue("margin-bottom", 65, 30);
+    }
+
+    &__info {
+        margin-bottom: 10px;
+    }
+
+    &__image {
+
+        display: flex;
+        justify-content: center;
+
+        @media (min-width:$mobile) {
+            position: absolute;
+            bottom: 20%;
+            right: 30%;
+
+        }
+    }
+
+    &__image-ibg {
+        width: 147px;
+        height: 148.058px;
+    }
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 35px;
+    }
+
+    &__icon {
+        @include adaptiveValue("font-size", 24, 18);
+    }
+
+    &__link {
+        @include adaptiveValue("font-size", 18, 16);
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}

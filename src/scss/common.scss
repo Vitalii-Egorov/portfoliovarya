@@ -1,0 +1,28 @@
+// Заголовки, общие БЄМ блоки и проче...
+
+
+.title-main {
+    position: relative;
+    z-index: 1;
+    @include adaptiveValue("top", 40, 20);
+    @include adaptiveValue("padding-left", 200, 10);
+    color: $title;
+    font-family: "Lora";
+    @include adaptiveValue("font-size", 52, 28);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.brown {
+    color: #A86649;
+}
+
+.bg {
+    background: #F5EFE8;
+}
+
+.bg2 {
+    background: #DDCAC2;
+}
